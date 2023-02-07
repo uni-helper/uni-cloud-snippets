@@ -8,20 +8,6 @@
     "resolveJsonModule": true,
     "types": ["node"]
   },
-  "include": [
-    "**/.*.js",
-    "**/.*.cjs",
-    "**/.*.mjs",
-    "**/.*.ts",
-    "**/.*.cts",
-    "**/.*.mts",
-    "**/*.js",
-    "**/*.cjs",
-    "**/*.mjs",
-    "**/*.ts",
-    "**/*.cts",
-    "**/*.mts",
-    "**/*.jsx"
-  ],
+  "include": ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.cts", "**/*.mts", "**/*.jsx"],
   "exclude": ["**/node_modules", "**/dist"]
 }
