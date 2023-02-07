@@ -76,12 +76,7 @@
   },
   "uniCloud 云函数上传文件到云存储": {
     "prefix": ["uniCloud.uploadFile"],
-    "body": [
-      "uniCloud.uploadFile({",
-      "\tcloudPath: '$1',",
-      "\tfileContent: $2",
-      "})$0"
-    ],
+    "body": ["uniCloud.uploadFile({", "\tcloudPath: '$1',", "\tfileContent: $2", "})$0"],
     "description": "uniCloud 云函数上传文件到云存储。更多信息查看 <https://uniapp.dcloud.io/uniCloud/storage?id=%e4%ba%91%e5%87%bd%e6%95%b0api>。"
   },
   "uniCloud 云函数获取文件下载链接": {
@@ -96,12 +91,7 @@
   },
   "uniCloud 云函数下载已上传至云开发的文件至本地": {
     "prefix": ["uniCloud.downloadFile"],
-    "body": [
-      "uniCloud.downloadFile({",
-      "\tfileID: '$1',",
-      "\ttempFilePath: '$2'",
-      "})$0"
-    ],
+    "body": ["uniCloud.downloadFile({", "\tfileID: '$1',", "\ttempFilePath: '$2'", "})$0"],
     "description": "uniCloud 云函数下载已上传至云开发的文件至本地。更多信息查看 <https://uniapp.dcloud.io/uniCloud/storage?id=%e4%ba%91%e5%87%bd%e6%95%b0api>。"
   }
 }
