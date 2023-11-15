@@ -1,13 +1,14 @@
 {
-  "extends": "@tsconfig/node18",
+  "extends": "@tsconfig/node20",
   "compilerOptions": {
     "baseUrl": ".",
     "lib": ["ESNext"],
     "module": "ESNext",
+    "moduleResolution": "Bundler",
     "target": "ESNext",
     "resolveJsonModule": true,
     "types": ["node"]
   },
-  "include": ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.cts", "**/*.mts", "**/*.jsx"],
+  "include": ["**/*.js", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.cts", "**/*.mts"],
   "exclude": ["**/node_modules", "**/dist"]
 }

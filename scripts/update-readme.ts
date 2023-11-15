@@ -24,6 +24,8 @@ let readme = `# @uni-helper/uni-cloud-snippets-vscode
 
 [改动日志](https://github.com/uni-helper/uni-cloud-snippets-vscode/blob/main/CHANGELOG.md)
 
+想让 \`uni-app\` 开发变得更直观、高效？想要更好的 \`uni-app\` 开发体验？不妨看看 [uni-helper 主页](https://uni-helper.js.org) 和 [uni-helper GitHub Organization](https://github.com/uni-helper)！
+
 ## 插件特性
 
 - uni-cloud 基本能力代码片段
@@ -52,9 +54,9 @@ for (const key of Object.keys(htmlObject)) {
   newPrefix = newPrefix.slice(0, -2);
   let newBody = '';
   newBody = `\`${body[0]
-    .replace(/\b .*[/>]/g, '')
-    .replace(/\(?\([\w "$'(),/:=>{|}]+/g, '()')
-    .replace(/\$\d[\w/<>-]*/g, '')}`;
+    .replaceAll(/\b .*[/>]/g, '')
+    .replaceAll(/\(?\([\w "$'(),/:=>{|}]+/g, '()')
+    .replaceAll(/\$\d[\w/<>-]*/g, '')}`;
   if (newBody.includes('/* ') && !newBody.includes(' */')) {
     newBody += ' */`';
   } else if (newBody.includes('<!-- ') && !newBody.includes(' -->')) {
@@ -80,9 +82,9 @@ for (const key of Object.keys(javascriptObject)) {
   newPrefix = newPrefix.slice(0, -2);
   let newBody = '';
   newBody = `\`${body[0]
-    .replace(/\b .*[/>]/g, '')
-    .replace(/\(?\([\w "$'(),/:=>{|}]+/g, '()')
-    .replace(/\$\d[\w/<>-]*/g, '')}`;
+    .replaceAll(/\b .*[/>]/g, '')
+    .replaceAll(/\(?\([\w "$'(),/:=>{|}]+/g, '()')
+    .replaceAll(/\$\d[\w/<>-]*/g, '')}`;
   if (newBody.includes('/* ') && !newBody.includes(' */')) {
     newBody += ' */`';
   } else if (newBody.includes('<!-- ') && !newBody.includes(' -->')) {
@@ -95,11 +97,6 @@ for (const key of Object.keys(javascriptObject)) {
   readme += `|${newBody}|${newPrefix}|${description}|\n`;
 }
 readme += '\n';
-
-readme += `## 额外推荐
-
-请查看 [uni-helper 插件说明](https://marketplace.visualstudio.com/items?itemName=uni-helper.uni-helper-vscode)。
-`;
 
 writeFileSync(readmePath, readme);
 
