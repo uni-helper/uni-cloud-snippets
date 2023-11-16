@@ -1,5 +1,9 @@
 # 改动日志
 
+## 0.3.0 (2023-11-16)
+
+- feat: 补充客户端和服务端代码片段
+
 ## 0.2.8
 
 - 切换到 [uni-helper](https://github.com/uni-helper) 组织下
